@@ -11,7 +11,7 @@
     }
   ],
   "require": {
-    "praxigento/mage2_ext_logging": "~0.1",
+    "praxigento/mage2_ext_logging": "~0.1"
   },
   "autoload": {
     "files": [
