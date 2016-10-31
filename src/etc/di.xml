@@ -2,4 +2,11 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
 
+    <!-- ******************** -->
+    <!-- Decorators / Plugins -->
+    <!-- ******************** -->
+    <type name="\Magento\Webapi\Controller\Rest\ParamsOverrider">
+        <!-- Log Web API requests data -->
+        <plugin name="flancer32_log_decorator" type="\Flancer32\Logger\Decor\Webapi\Controller\Rest\ParamsOverrider" sortOrder="100" disabled="false"/>
+    </type>
 </config>
