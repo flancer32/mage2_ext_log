@@ -18,7 +18,7 @@
       "src/registration.php"
     ],
     "psr-4": {
-      "Flancer32\\Log\\": "src/"
+      "Flancer32\\Logging\\": "src/"
     }
   }
 }
