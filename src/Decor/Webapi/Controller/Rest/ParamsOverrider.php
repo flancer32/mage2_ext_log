@@ -2,7 +2,7 @@
 /**
  * User: Alex Gusev <alex@flancer64.com>
  */
-namespace Flancer32\Logger\Decor\Webapi\Controller\Rest;
+namespace Flancer32\Logging\Decor\Webapi\Controller\Rest;
 
 class ParamsOverrider
 {
