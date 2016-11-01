@@ -19,7 +19,7 @@ class ParamsOverrider
     public function afterOverride($subject, $result)
     {
         $json = json_encode($result);
-        $this->_logger->debug($json);
+        $this->_logger->debug("Request JSON: ".$json);
         return $result;
     }
 }
