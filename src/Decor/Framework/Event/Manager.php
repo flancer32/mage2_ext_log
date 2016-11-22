@@ -11,12 +11,12 @@ namespace Flancer32\Logging\Decor\Framework\Event;
 class Manager
 {
     /** @var \Psr\Log\LoggerInterface */
-    protected $_logger;
+    protected $logger;
 
     public function __construct(
-        \Psr\Log\LoggerInterface $logger
+        \Flancer32\Logging\Fw\Logger\Event $logger
     ) {
-        $this->_logger = $logger;
+        $this->logger = $logger;
     }
 
     public function beforeDispatch(
@@ -24,6 +24,6 @@ class Manager
         $eventName,
         array $data = []
     ) {
-//        $this->_logger->debug($eventName);
+        $this->logger->debug($eventName);
     }
 }

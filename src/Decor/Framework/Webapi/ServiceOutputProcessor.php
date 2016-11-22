@@ -12,7 +12,7 @@ class ServiceOutputProcessor
     protected $_logger;
 
     public function __construct(
-        \Psr\Log\LoggerInterface $logger
+        \Flancer32\Logging\Fw\Logger\WebApi $logger
     ) {
         $this->_logger = $logger;
     }

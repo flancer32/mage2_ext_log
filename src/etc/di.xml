@@ -12,7 +12,7 @@
                 sortOrder="100" disabled="false"/>
     </type>
     <type name="\Magento\Framework\Webapi\ServiceOutputProcessor">
-        <!-- Log REST API responses -->
+        <!-- Log Web API responses -->
         <plugin name="flancer32_log_decorator"
                 type="\Flancer32\Logging\Decor\Framework\Webapi\ServiceOutputProcessor"
                 sortOrder="100" disabled="false"/>
@@ -24,7 +24,7 @@
                 sortOrder="100" disabled="false"/>
     </type>
     <type name="\Magento\Webapi\Controller\PathProcessor">
-        <!-- Log API paths processing. -->
+        <!-- Log Web API paths processing. -->
         <plugin name="flancer32_log_decorator"
                 type="\Flancer32\Logging\Decor\Webapi\Controller\PathProcessor"
                 sortOrder="100" disabled="false"/>

@@ -10,16 +10,15 @@ class ParamsOverrider
     protected $_logger;
 
     public function __construct(
-        \Psr\Log\LoggerInterface $logger
-    )
-    {
+        \Flancer32\Logging\Fw\Logger\WebApi $logger
+    ) {
         $this->_logger = $logger;
     }
 
     public function afterOverride($subject, $result)
     {
         $json = json_encode($result);
-        $this->_logger->debug("Request JSON: ".$json);
+        $this->_logger->debug("Request JSON: " . $json);
         return $result;
     }
 }
