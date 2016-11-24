@@ -24,6 +24,9 @@ class Manager
         $eventName,
         array $data = []
     ) {
-        $this->logger->debug($eventName);
+        /* TODO: switch logging in config */
+        if(false) {
+            $this->logger->debug($eventName);
+        }
     }
 }
