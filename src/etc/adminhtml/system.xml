@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<config
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="dev">
+            <group id="flancer32_log" translate="label" type="text"
+                    sortOrder="1000" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Logging Settings</label>
+                <comment>
+                    <![CDATA[<a href="https://github.com/flancer32/mage2_ext_log" target="_blank">Module sources</a>]]>
+                </comment>
+                <field id="active" translate="label" type="select"
+                        sortOrder="100" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="enabled_webapi" translate="label" type="select"
+                        sortOrder="200" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enbale Web API logging</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Allow WEB API logging using 'webapi' logger.</comment>
+                    <tooltip>Some tooltip here.</tooltip>
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>
+                <field id="enabled_events" translate="label" type="select"
+                        sortOrder="200" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enbale events logging</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Allow event logging using 'events' logger.</comment>
+                    <tooltip>Some tooltip here.</tooltip>
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
