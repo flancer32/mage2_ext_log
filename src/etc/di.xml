@@ -5,12 +5,12 @@
     <!-- ******************** -->
     <!-- Decorators / Plugins -->
     <!-- ******************** -->
-    <type name="\Magento\Framework\Event\Manager">
-        <!-- Log observable events -->
-        <plugin name="flancer32_log_decorator"
-                type="\Flancer32\Logging\Decor\Framework\Event\Manager"
-                sortOrder="100" disabled="false"/>
-    </type>
+    <!--<type name="\Magento\Framework\Event\Manager">-->
+        <!--&lt;!&ndash; Log observable events &ndash;&gt;-->
+        <!--<plugin name="flancer32_log_decorator"-->
+                <!--type="\Flancer32\Logging\Decor\Framework\Event\Manager"-->
+                <!--sortOrder="100" disabled="false"/>-->
+    <!--</type>-->
     <type name="\Magento\Framework\Webapi\ServiceOutputProcessor">
         <!-- Log Web API responses -->
         <plugin name="flancer32_log_decorator"
