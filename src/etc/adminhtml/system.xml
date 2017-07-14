@@ -3,7 +3,10 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <section id="dev">
+        <section id="dev" translate="label" type="text" showInDefault="1">
+            <label>Developer</label>
+            <resource>Magento_Backend::advanced</resource>
+            <tab>advanced</tab>
             <group id="flancer32_log" translate="label" type="text"
                     sortOrder="1000" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Logging Settings</label>
