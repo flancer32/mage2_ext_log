@@ -48,9 +48,14 @@ class ServiceOutputProcessor
         if ($this->isEnabled()) {
             try {
                 $json = json_encode($result);
-                $msg = "Response from service '$serviceClassName::$serviceMethodName()': ";
-                $msg .= $json;
-                $this->logger->debug($msg);
+                if (
+                    ($serviceClassName != 'Magento\Integration\Api\AdminTokenServiceInterface') &&
+                    ($serviceMethodName != 'createAdminAccessToken')
+                ) {
+                    $msg = "Response from service '$serviceClassName::$serviceMethodName()': ";
+                    $msg .= $json;
+                    $this->logger->debug($msg);
+                }
             } catch (\Throwable $th) {
                 /* do nothing and stealth exception */
             }

@@ -37,7 +37,13 @@ class ParamsOverrider
     {
         if ($this->isEnabled()) {
             $json = json_encode($result);
-            $this->logger->debug("Request JSON: " . $json);
+            /* don't log admin token requests */
+            if (!(
+                strstr($json, '"username":')
+                && strstr($json, '"password":'))
+            ) {
+                $this->logger->debug("Request JSON: " . $json);
+            }
         }
         return $result;
     }
