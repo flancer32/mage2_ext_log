@@ -30,9 +30,9 @@ Additionally, there are 2 options to log Web API requests/responses and events i
 ```bash
 $ cd ${DIR_MAGE_ROOT}   // go to Magento 2 root folder ('composer.json' file should be placed there)
 $ composer require flancer32/mage2_ext_log
-$ bin/magento module:enable Flancer32_Logging
-$ bin/magento setup:upgrade
-$ bin/magento setup:di:compile
+$ ./bin/magento module:enable Flancer32_Logging
+$ ./bin/magento setup:upgrade
+$ ./bin/magento setup:di:compile
 
 ```
 
