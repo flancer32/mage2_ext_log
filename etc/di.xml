@@ -8,14 +8,6 @@
     <preference for="Psr\Log\LoggerInterface"
                 type="Flancer32\Logging\Logger"/>
 
-    <!--<type name="Flancer32\Logging\Logger">-->
-    <!--<arguments>-->
-    <!--&lt;!&ndash; Config file path is related to Magento 2 base directory. Absolute path can be used too. &ndash;&gt;-->
-    <!--<argument name="configFile" xsi:type="string">var/log/logging.yaml</argument>-->
-    <!--&lt;!&ndash; Name of the logger in configuration file. Default: "main".  &ndash;&gt;-->
-    <!--<argument name="loggerName" xsi:type="string">main</argument>-->
-    <!--</arguments>-->
-    <!--</type>-->
 
     <!-- ******************** -->
     <!-- Decorators / Plugins -->
