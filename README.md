@@ -1,6 +1,6 @@
 # mage2_ext_log
 
-Add Monolog Cascade support to Magento 2.
+Add [Monolog Cascade](https://github.com/theorchard/monolog-cascade) support to Magento 2.
 
 ## Overview
 
