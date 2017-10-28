@@ -46,8 +46,6 @@ class Logger
                 $this->logger = \Cascade\Cascade::getLogger($name);
             } else {
                 $this->logger = $monolog;
-                $err = "Cannot open logging configuration file '$fileName'. Default Magento logger is used.";
-                $this->warning($err);
             }
         } catch (\Exception $e) {
             if (is_null($this->logger)) $this->logger = $monolog;

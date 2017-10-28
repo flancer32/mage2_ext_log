@@ -14,16 +14,13 @@
                        sortOrder="200" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Enable Web API logging</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <comment>Allow WEB API logging using 'webapi' logger.</comment>
+                    <comment>Allow WEB API logging using 'webapi' logger (ignored in production mode).</comment>
                 </field>
                 <field id="enabled_events" translate="label" type="select"
                        sortOrder="200" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Enable events logging</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <comment>Allow event logging using 'events' logger.</comment>
-                    <depends>
-                        <field id="active">1</field>
-                    </depends>
+                    <comment>Allow event logging using 'events' logger (ignored in production mode).</comment>
                 </field>
             </group>
         </section>
