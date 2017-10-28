@@ -2,6 +2,7 @@
 /**
  * User: Alex Gusev <alex@flancer64.com>
  */
+
 namespace Flancer32\Logging\Decor\Webapi\Controller\Rest;
 
 /**
@@ -17,9 +18,10 @@ class ParamsOverrider
     protected $logger;
 
     public function __construct(
-        \Flancer32\Logging\Fw\Logger\WebApi $logger,
+        \Flancer32\Logging\Logger\WebApi $logger,
         \Flancer32\Logging\Helper\Config $hlpConfig
-    ) {
+    )
+    {
         $this->logger = $logger;
         $this->hlpConfig = $hlpConfig;
     }
