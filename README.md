@@ -22,7 +22,7 @@ file found.
 
 Default configuration file should be placed in `./var/log/logging.yaml`.
 
-Additionally, there are 2 options to log Web API requests/responses and events in development/default mode.
+Additionally, there are 2 options to log Web API requests/responses and observer's events in `development` mode.
 
 
 ## Installation
