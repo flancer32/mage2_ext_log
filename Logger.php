@@ -11,7 +11,10 @@ namespace Flancer32\Logging;
 class Logger
     implements \Psr\Log\LoggerInterface
 {
-    const DEFAULT_LOGGER_NAME = 'main';
+    /** Default configuration file for the logger */
+    const DEF_CONFG_FILE = 'var/log/logging.yaml';
+    /** Logger name in config: 'var/log/logging.yaml' */
+    const DEF_LOGGER_NAME = 'main';
     /**
      * Logger (default Magento 2 logger or Cascaded Monolog).
      *
@@ -22,38 +25,25 @@ class Logger
     public function __construct(
         \Magento\Framework\Logger\Monolog $monolog,
         $configFile = null,
-        $loggerName = self::DEFAULT_LOGGER_NAME
+        $loggerName = null
     )
     {
-        if (is_null($configFile)) {
-            /* use default Magento 2 logger */
-            $this->logger = $monolog;
-        } else {
-            /* use Cascaded Monolog */
-            $this->init($configFile, $loggerName, $monolog);
-        }
-    }
+        /* validate input parameters */
+        $config = is_null($configFile) ? static::DEF_CONFG_FILE : $configFile;
+        $name = is_null($loggerName) ? static::DEF_LOGGER_NAME : $loggerName;
 
-    /**
-     * Configure Cascaded Monolog logger and use it.
-     *
-     * @param string $configFile
-     * @param string $loggerName
-     * @param \Magento\Framework\Logger\Monolog $monolog
-     */
-    private function init($configFile, $loggerName, $monolog)
-    {
+        /* try to init cascaded loggers */
         try {
             $fs = new \Symfony\Component\Filesystem\Filesystem();
-            if ($fs->isAbsolutePath($configFile)) {
-                $fileName = $configFile;
+            if ($fs->isAbsolutePath($config)) {
+                $fileName = $config;
             } else {
-                $fileName = BP . '/' . $configFile;
+                $fileName = BP . '/' . $config;
             }
             $realPath = realpath($fileName);
             if ($realPath) {
                 \Cascade\Cascade::fileConfig($realPath);
-                $this->logger = \Cascade\Cascade::getLogger($loggerName);
+                $this->logger = \Cascade\Cascade::getLogger($name);
             } else {
                 $this->logger = $monolog;
                 $err = "Cannot open logging configuration file '$fileName'. Default Magento logger is used.";

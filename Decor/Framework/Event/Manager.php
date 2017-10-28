@@ -18,9 +18,10 @@ class Manager
     protected $logger;
 
     public function __construct(
-        \Flancer32\Logging\Fw\Logger\Event $logger,
+        \Flancer32\Logging\Logger\Event $logger,
         \Flancer32\Logging\Helper\Config $hlpConfig
-    ) {
+    )
+    {
         $this->logger = $logger;
         $this->hlpConfig = $hlpConfig;
     }
@@ -35,7 +36,8 @@ class Manager
         \Magento\Framework\Event\Manager $subject,
         $eventName,
         array $data = []
-    ) {
+    )
+    {
         /* $name is calculated twice to speed up calculations when logging is disabled */
         if ($this->enabled === false) {
             /* do nothing */
