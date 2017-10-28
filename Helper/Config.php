@@ -32,7 +32,7 @@ class Config
      */
     public function getEventsEnabled()
     {
-        $result = $this->scopeConfig->getValue('system/flancer32_log/enabled_events');
+        $result = $this->scopeConfig->getValue('dev/flancer32_log/enabled_events');
         $result = filter_var($result, FILTER_VALIDATE_BOOLEAN);
         $result = $result && !$this->isInProductionMode();
         return $result;
@@ -45,7 +45,7 @@ class Config
      */
     public function getWebApiEnabled()
     {
-        $result = $this->scopeConfig->getValue('system/flancer32_log/enabled_webapi');
+        $result = $this->scopeConfig->getValue('dev/flancer32_log/enabled_webapi');
         $result = filter_var($result, FILTER_VALIDATE_BOOLEAN);
         $result = $result && !$this->isInProductionMode();
         return $result;
