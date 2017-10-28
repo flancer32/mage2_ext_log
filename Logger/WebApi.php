@@ -2,10 +2,11 @@
 /**
  * User: Alex Gusev <alex@flancer64.com>
  */
-namespace Flancer32\Logging\Fw\Logger;
+
+namespace Flancer32\Logging\Logger;
 
 /**
- * Deocrator for WebAPI logger.
+ * Decorator for WebAPI logger.
  */
 class WebApi
     implements \Psr\Log\LoggerInterface
@@ -19,7 +20,8 @@ class WebApi
 
     public function __construct(
         \Praxigento\Logging\Logger $logger = null
-    ) {
+    )
+    {
         if (is_null($logger)) {
             /* */
             $obm = \Magento\Framework\App\ObjectManager::getInstance();

@@ -1,11 +1,13 @@
 <?php
 /**
- * Container for module's constants (hardcoded configuration).
+ * Module's hardcoded configuration.
  *
  * User: Alex Gusev <alex@flancer64.com>
  */
+
 namespace Flancer32\Logging;
 
-class Config {
+class Config
+{
     const MODULE = 'Flancer32_Logging';
 }

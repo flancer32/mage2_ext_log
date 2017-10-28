@@ -1,6 +1,6 @@
 <?php
 /**
- * Script to register M2-module
+ * Magento2-module registration.
  *
  * User: Alex Gusev <alex@flancer64.com>
  */

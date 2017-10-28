@@ -11,14 +11,15 @@
     }
   ],
   "require": {
-    "praxigento/mage2_ext_logging": "~0.1"
+    "php": ">=5.5",
+    "theorchard/monolog-cascade": "^0.5"
   },
   "autoload": {
     "files": [
-      "src/registration.php"
+      "./registration.php"
     ],
     "psr-4": {
-      "Flancer32\\Logging\\": "src/"
+      "Flancer32\\Logging\\": ""
     }
   }
 }

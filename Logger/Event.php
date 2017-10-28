@@ -2,10 +2,10 @@
 /**
  * User: Alex Gusev <alex@flancer64.com>
  */
-namespace Flancer32\Logging\Fw\Logger;
+namespace Flancer32\Logging\Logger;
 
 /**
- * Deocrator for events logger.
+ * Decorator for events logger.
  */
 class Event
     implements \Psr\Log\LoggerInterface
