@@ -95,8 +95,12 @@ loggers:
 
 ## Module Configuration
 
-See `Store / Configuration / Advanced / System / Advanced Logging Settings`:
+See `Store / Configuration / Advanced / Developer / Advanced Logging Settings`:
 
 ![image](./etc/docs/img/store_config.png)
 
-Attention: Web API & events logging are enabled only in developer/default mode.
+Attention: section `Store / Configuration / Advanced / Developer` is available in `developer` mode only:
+
+```bash
+$ ./bin/magento deploy:mode:set developer
+```
