@@ -2,6 +2,7 @@
 /**
  * User: Alex Gusev <alex@flancer64.com>
  */
+
 namespace Flancer32\Logging\Helper;
 
 /**
@@ -15,20 +16,9 @@ class Config
 
     public function __construct(
         \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig
-    ) {
-        $this->scopeConfig = $scopeConfig;
-    }
-
-    /**
-     * Global module's activity.
-     *
-     * @return bool
-     */
-    public function getActive()
+    )
     {
-        $result = $this->scopeConfig->getValue('dev/flancer32_log/active');
-        $result = filter_var($result, FILTER_VALIDATE_BOOLEAN);
-        return $result;
+        $this->scopeConfig = $scopeConfig;
     }
 
     /**
@@ -40,8 +30,6 @@ class Config
     {
         $result = $this->scopeConfig->getValue('dev/flancer32_log/enabled_events');
         $result = filter_var($result, FILTER_VALIDATE_BOOLEAN);
-        /* disable value if module is not active */
-        $result = $result && $this->getActive();
         return $result;
     }
 
@@ -54,8 +42,6 @@ class Config
     {
         $result = $this->scopeConfig->getValue('dev/flancer32_log/enabled_webapi');
         $result = filter_var($result, FILTER_VALIDATE_BOOLEAN);
-        /* disable value if module is not active */
-        $result = $result && $this->getActive();
         return $result;
     }
 }

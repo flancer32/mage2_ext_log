@@ -3,7 +3,7 @@
  * User: Alex Gusev <alex@flancer64.com>
  */
 
-namespace Flancer32\Logging\Decor\Webapi\Controller\Rest;
+namespace Flancer32\Logging\Plugin\Webapi\Controller\Rest;
 
 /**
  * Log request JSON.

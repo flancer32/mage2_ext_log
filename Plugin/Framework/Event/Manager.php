@@ -3,7 +3,7 @@
  * User: Alex Gusev <alex@flancer64.com>
  */
 
-namespace Flancer32\Logging\Decor\Framework\Event;
+namespace Flancer32\Logging\Plugin\Framework\Event;
 
 /**
  * Log events.

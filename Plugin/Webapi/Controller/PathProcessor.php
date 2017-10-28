@@ -2,7 +2,7 @@
 /**
  * User: Alex Gusev <alex@flancer64.com>
  */
-namespace Flancer32\Logging\Decor\Webapi\Controller;
+namespace Flancer32\Logging\Plugin\Webapi\Controller;
 
 /**
  * Log API paths processing.

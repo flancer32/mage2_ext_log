@@ -1,6 +1,6 @@
 {
   "name": "flancer32/mage2_ext_log",
-  "description": "Logging extension for Magento 2 (API, controllers, etc).",
+  "description": "Add Monolog Cascade support to Magento 2.",
   "type": "magento2-module",
   "homepage": "https://github.com/flancer32/mage2_ext_log",
   "license": "MIT",

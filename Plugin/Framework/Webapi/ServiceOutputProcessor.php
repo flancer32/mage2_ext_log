@@ -3,7 +3,7 @@
  * User: Alex Gusev <alex@flancer64.com>
  */
 
-namespace Flancer32\Logging\Decor\Framework\Webapi;
+namespace Flancer32\Logging\Plugin\Framework\Webapi;
 
 /**
  * Log REST response data.
