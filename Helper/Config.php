@@ -34,7 +34,6 @@ class Config
     {
         $result = $this->scopeConfig->getValue('dev/flancer32_log/enabled_events');
         $result = filter_var($result, FILTER_VALIDATE_BOOLEAN);
-        $result = $result && !$this->isInProductionMode();
         return $result;
     }
 
